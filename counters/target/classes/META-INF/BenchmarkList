@@ -1,0 +1,4 @@
+JMH S 22 mipt.eilza.MyBenchmark S 62 mipt.eilza.generated.MyBenchmark_testCounterSequential_jmhTest S 21 testCounterSequential S 3 All E A 1 1 1 E I 1 2 E E I 1 3 E E I 1 2 E E E E E E E E E 
+JMH S 22 mipt.eilza.MyBenchmark S 64 mipt.eilza.generated.MyBenchmark_testCounterSynchronized_jmhTest S 23 testCounterSynchronized S 3 All E A 1 1 1 E I 1 2 E E I 1 3 E E I 1 2 E E E E E E E E E 
+JMH S 22 mipt.eilza.MyBenchmark S 56 mipt.eilza.generated.MyBenchmark_testCounterLock_jmhTest S 15 testCounterLock S 3 All E A 1 1 1 E I 1 2 E E I 1 3 E E I 1 2 E E E E E E E E E 
+JMH S 22 mipt.eilza.MyBenchmark S 62 mipt.eilza.generated.MyBenchmark_testCounterAtomicLong_jmhTest S 21 testCounterAtomicLong S 3 All E A 1 1 1 E I 1 2 E E I 1 3 E E I 1 2 E E E E E E E E E 

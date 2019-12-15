@@ -1,0 +1,1028 @@
+"C:\Program Files\Java\jdk-11.0.1\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\oboro\.m2\repository\mysql-connector-java-5.1.47-bin.jar;C:\Users\oboro\.m2\repository\jregex1.2_01.jar;C:\Users\oboro\IdeaProjects\counters\target\classes;C:\Users\oboro\.m2\repository\org\openjdk\jmh\jmh-core\1.22\jmh-core-1.22.jar;C:\Users\oboro\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar;C:\Users\oboro\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;C:\Users\oboro\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\oboro\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar mipt.eilza.MyBenchmark
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.openjdk.jmh.util.Utils (file:/C:/Users/oboro/.m2/repository/org/openjdk/jmh/jmh-core/1.22/jmh-core-1.22.jar) to field java.io.PrintStream.charOut
+WARNING: Please consider reporting this to the maintainers of org.openjdk.jmh.util.Utils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: mipt.eilza.MyBenchmark.testCounterAtomicLong
+
+# Run progress: 0,00% complete, ETA 00:20:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 2,295 ops/s
+# Warmup Iteration   2: 2,396 ops/s
+Iteration   1: 2,284 ops/s
+Iteration   2: 2,236 ops/s
+Iteration   3: 2,256 ops/s
+
+# Run progress: 4,17% complete, ETA 00:20:05
+# Fork: 2 of 2
+# Warmup Iteration   1: 2,217 ops/s
+# Warmup Iteration   2: 2,189 ops/s
+Iteration   1: 2,221 ops/s
+Iteration   2: 2,398 ops/s
+Iteration   3: 2,466 ops/s
+
+
+Result "mipt.eilza.MyBenchmark.testCounterAtomicLong":
+  2,310 ±(99.9%) 0,278 ops/s [Average]
+  (min, avg, max) = (2,221, 2,310, 2,466), stdev = 0,099
+  CI (99.9%): [2,032, 2,588] (assumes normal distribution)
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: mipt.eilza.MyBenchmark.testCounterLock
+
+# Run progress: 8,33% complete, ETA 00:19:17
+# Fork: 1 of 2
+# Warmup Iteration   1: 1,931 ops/s
+# Warmup Iteration   2: 1,889 ops/s
+Iteration   1: 1,825 ops/s
+Iteration   2: 1,742 ops/s
+Iteration   3: 2,001 ops/s
+
+# Run progress: 12,50% complete, ETA 00:18:29
+# Fork: 2 of 2
+# Warmup Iteration   1: 2,022 ops/s
+# Warmup Iteration   2: 2,013 ops/s
+Iteration   1: 2,020 ops/s
+Iteration   2: 1,908 ops/s
+Iteration   3: 1,948 ops/s
+
+
+Result "mipt.eilza.MyBenchmark.testCounterLock":
+  1,908 ±(99.9%) 0,300 ops/s [Average]
+  (min, avg, max) = (1,742, 1,908, 2,020), stdev = 0,107
+  CI (99.9%): [1,607, 2,208] (assumes normal distribution)
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: mipt.eilza.MyBenchmark.testCounterSequential
+
+# Run progress: 16,67% complete, ETA 00:17:39
+# Fork: 1 of 2
+# Warmup Iteration   1: 261,339 ops/s
+# Warmup Iteration   2: 265,109 ops/s
+Iteration   1: 257,447 ops/s
+Iteration   2: 266,505 ops/s
+Iteration   3: 248,278 ops/s
+
+# Run progress: 20,83% complete, ETA 00:16:39
+# Fork: 2 of 2
+# Warmup Iteration   1: 254,351 ops/s
+# Warmup Iteration   2: 269,825 ops/s
+Iteration   1: 267,352 ops/s
+Iteration   2: 264,797 ops/s
+Iteration   3: 274,921 ops/s
+
+
+Result "mipt.eilza.MyBenchmark.testCounterSequential":
+  263,217 ±(99.9%) 25,818 ops/s [Average]
+  (min, avg, max) = (248,278, 263,217, 274,921), stdev = 9,207
+  CI (99.9%): [237,398, 289,035] (assumes normal distribution)
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: mipt.eilza.MyBenchmark.testCounterSynchronized
+
+# Run progress: 25,00% complete, ETA 00:15:42
+# Fork: 1 of 2
+# Warmup Iteration   1: 2,146 ops/s
+# Warmup Iteration   2: 2,166 ops/s
+Iteration   1: 2,157 ops/s
+Iteration   2: 2,114 ops/s
+Iteration   3: 2,224 ops/s
+
+# Run progress: 29,17% complete, ETA 00:14:51
+# Fork: 2 of 2
+# Warmup Iteration   1: 2,232 ops/s
+# Warmup Iteration   2: 2,189 ops/s
+Iteration   1: 2,141 ops/s
+Iteration   2: 2,147 ops/s
+Iteration   3: 2,057 ops/s
+
+
+Result "mipt.eilza.MyBenchmark.testCounterSynchronized":
+  2,140 ±(99.9%) 0,153 ops/s [Average]
+  (min, avg, max) = (2,057, 2,140, 2,224), stdev = 0,055
+  CI (99.9%): [1,987, 2,293] (assumes normal distribution)
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: mipt.eilza.MyBenchmark.testCounterAtomicLong
+
+# Run progress: 33,33% complete, ETA 00:14:02
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,424 s/op
+# Warmup Iteration   2: 0,441 s/op
+Iteration   1: 0,418 s/op
+Iteration   2: 0,415 s/op
+Iteration   3: 0,394 s/op
+
+# Run progress: 37,50% complete, ETA 00:13:10
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,414 s/op
+# Warmup Iteration   2: 0,406 s/op
+Iteration   1: 0,423 s/op
+Iteration   2: 0,428 s/op
+Iteration   3: 0,468 s/op
+
+
+Result "mipt.eilza.MyBenchmark.testCounterAtomicLong":
+  0,424 ±(99.9%) 0,068 s/op [Average]
+  (min, avg, max) = (0,394, 0,424, 0,468), stdev = 0,024
+  CI (99.9%): [0,356, 0,493] (assumes normal distribution)
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: mipt.eilza.MyBenchmark.testCounterLock
+
+# Run progress: 41,67% complete, ETA 00:12:18
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,544 s/op
+# Warmup Iteration   2: 0,535 s/op
+Iteration   1: 0,545 s/op
+Iteration   2: 0,528 s/op
+Iteration   3: 0,529 s/op
+
+# Run progress: 45,83% complete, ETA 00:11:25
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,539 s/op
+# Warmup Iteration   2: 0,529 s/op
+Iteration   1: 0,552 s/op
+Iteration   2: 0,527 s/op
+Iteration   3: 0,553 s/op
+
+
+Result "mipt.eilza.MyBenchmark.testCounterLock":
+  0,539 ±(99.9%) 0,035 s/op [Average]
+  (min, avg, max) = (0,527, 0,539, 0,553), stdev = 0,012
+  CI (99.9%): [0,504, 0,574] (assumes normal distribution)
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: mipt.eilza.MyBenchmark.testCounterSequential
+
+# Run progress: 50,00% complete, ETA 00:10:32
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,004 s/op
+# Warmup Iteration   2: 0,004 s/op
+Iteration   1: 0,004 s/op
+Iteration   2: 0,004 s/op
+Iteration   3: 0,004 s/op
+
+# Run progress: 54,16% complete, ETA 00:09:38
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,004 s/op
+# Warmup Iteration   2: 0,004 s/op
+Iteration   1: 0,004 s/op
+Iteration   2: 0,004 s/op
+Iteration   3: 0,004 s/op
+
+
+Result "mipt.eilza.MyBenchmark.testCounterSequential":
+  0,004 ±(99.9%) 0,001 s/op [Average]
+  (min, avg, max) = (0,004, 0,004, 0,004), stdev = 0,001
+  CI (99.9%): [0,004, 0,004] (assumes normal distribution)
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: mipt.eilza.MyBenchmark.testCounterSynchronized
+
+# Run progress: 58,33% complete, ETA 00:08:45
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,477 s/op
+# Warmup Iteration   2: 0,490 s/op
+Iteration   1: 0,525 s/op
+Iteration   2: 0,468 s/op
+Iteration   3: 0,481 s/op
+
+# Run progress: 62,50% complete, ETA 00:07:52
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,484 s/op
+# Warmup Iteration   2: 0,472 s/op
+Iteration   1: 0,491 s/op
+Iteration   2: 0,512 s/op
+Iteration   3: 0,526 s/op
+
+
+Result "mipt.eilza.MyBenchmark.testCounterSynchronized":
+  0,500 ±(99.9%) 0,067 s/op [Average]
+  (min, avg, max) = (0,468, 0,500, 0,526), stdev = 0,024
+  CI (99.9%): [0,433, 0,567] (assumes normal distribution)
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: mipt.eilza.MyBenchmark.testCounterAtomicLong
+
+# Run progress: 66,66% complete, ETA 00:07:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,421 ±(99.9%) 0,049 s/op
+# Warmup Iteration   2: 0,420 ±(99.9%) 0,073 s/op
+Iteration   1: 0,440 ±(99.9%) 0,083 s/op
+                 testCounterAtomicLong·p0.00:   0,284 s/op
+                 testCounterAtomicLong·p0.50:   0,464 s/op
+                 testCounterAtomicLong·p0.90:   0,567 s/op
+                 testCounterAtomicLong·p0.95:   0,609 s/op
+                 testCounterAtomicLong·p0.99:   0,619 s/op
+                 testCounterAtomicLong·p0.999:  0,619 s/op
+                 testCounterAtomicLong·p0.9999: 0,619 s/op
+                 testCounterAtomicLong·p1.00:   0,619 s/op
+
+Iteration   2: 0,435 ±(99.9%) 0,065 s/op
+                 testCounterAtomicLong·p0.00:   0,287 s/op
+                 testCounterAtomicLong·p0.50:   0,451 s/op
+                 testCounterAtomicLong·p0.90:   0,535 s/op
+                 testCounterAtomicLong·p0.95:   0,544 s/op
+                 testCounterAtomicLong·p0.99:   0,545 s/op
+                 testCounterAtomicLong·p0.999:  0,545 s/op
+                 testCounterAtomicLong·p0.9999: 0,545 s/op
+                 testCounterAtomicLong·p1.00:   0,545 s/op
+
+Iteration   3: 0,441 ±(99.9%) 0,074 s/op
+                 testCounterAtomicLong·p0.00:   0,280 s/op
+                 testCounterAtomicLong·p0.50:   0,481 s/op
+                 testCounterAtomicLong·p0.90:   0,533 s/op
+                 testCounterAtomicLong·p0.95:   0,549 s/op
+                 testCounterAtomicLong·p0.99:   0,553 s/op
+                 testCounterAtomicLong·p0.999:  0,553 s/op
+                 testCounterAtomicLong·p0.9999: 0,553 s/op
+                 testCounterAtomicLong·p1.00:   0,553 s/op
+
+
+# Run progress: 70,83% complete, ETA 00:06:07
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,438 ±(99.9%) 0,123 s/op
+# Warmup Iteration   2: 0,427 ±(99.9%) 0,071 s/op
+Iteration   1: 0,442 ±(99.9%) 0,086 s/op
+                 testCounterAtomicLong·p0.00:   0,276 s/op
+                 testCounterAtomicLong·p0.50:   0,458 s/op
+                 testCounterAtomicLong·p0.90:   0,577 s/op
+                 testCounterAtomicLong·p0.95:   0,601 s/op
+                 testCounterAtomicLong·p0.99:   0,607 s/op
+                 testCounterAtomicLong·p0.999:  0,607 s/op
+                 testCounterAtomicLong·p0.9999: 0,607 s/op
+                 testCounterAtomicLong·p1.00:   0,607 s/op
+
+Iteration   2: 0,407 ±(99.9%) 0,065 s/op
+                 testCounterAtomicLong·p0.00:   0,276 s/op
+                 testCounterAtomicLong·p0.50:   0,442 s/op
+                 testCounterAtomicLong·p0.90:   0,484 s/op
+                 testCounterAtomicLong·p0.95:   0,517 s/op
+                 testCounterAtomicLong·p0.99:   0,530 s/op
+                 testCounterAtomicLong·p0.999:  0,530 s/op
+                 testCounterAtomicLong·p0.9999: 0,530 s/op
+                 testCounterAtomicLong·p1.00:   0,530 s/op
+
+Iteration   3: 0,424 ±(99.9%) 0,081 s/op
+                 testCounterAtomicLong·p0.00:   0,286 s/op
+                 testCounterAtomicLong·p0.50:   0,465 s/op
+                 testCounterAtomicLong·p0.90:   0,511 s/op
+                 testCounterAtomicLong·p0.95:   0,633 s/op
+                 testCounterAtomicLong·p0.99:   0,672 s/op
+                 testCounterAtomicLong·p0.999:  0,672 s/op
+                 testCounterAtomicLong·p0.9999: 0,672 s/op
+                 testCounterAtomicLong·p1.00:   0,672 s/op
+
+
+
+Result "mipt.eilza.MyBenchmark.testCounterAtomicLong":
+  N = 141
+  mean =      0,431 ±(99.9%) 0,027 s/op
+
+  Histogram, s/op:
+    [0,200, 0,250) = 0 
+    [0,250, 0,300) = 31 
+    [0,300, 0,350) = 10 
+    [0,350, 0,400) = 2 
+    [0,400, 0,450) = 21 
+    [0,450, 0,500) = 44 
+    [0,500, 0,550) = 22 
+    [0,550, 0,600) = 8 
+    [0,600, 0,650) = 2 
+
+  Percentiles, s/op:
+      p(0,0000) =      0,276 s/op
+     p(50,0000) =      0,461 s/op
+     p(90,0000) =      0,537 s/op
+     p(95,0000) =      0,562 s/op
+     p(99,0000) =      0,650 s/op
+     p(99,9000) =      0,672 s/op
+     p(99,9900) =      0,672 s/op
+     p(99,9990) =      0,672 s/op
+     p(99,9999) =      0,672 s/op
+    p(100,0000) =      0,672 s/op
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: mipt.eilza.MyBenchmark.testCounterLock
+
+# Run progress: 75,00% complete, ETA 00:05:15
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,505 ±(99.9%) 0,069 s/op
+# Warmup Iteration   2: 0,522 ±(99.9%) 0,099 s/op
+Iteration   1: 0,534 ±(99.9%) 0,099 s/op
+                 testReentrantLock·p0.00:   0,369 s/op
+                 testReentrantLock·p0.50:   0,580 s/op
+                 testReentrantLock·p0.90:   0,662 s/op
+                 testReentrantLock·p0.95:   0,678 s/op
+                 testReentrantLock·p0.99:   0,678 s/op
+                 testReentrantLock·p0.999:  0,678 s/op
+                 testReentrantLock·p0.9999: 0,678 s/op
+                 testReentrantLock·p1.00:   0,678 s/op
+
+Iteration   2: 0,559 ±(99.9%) 0,112 s/op
+                 testReentrantLock·p0.00:   0,326 s/op
+                 testReentrantLock·p0.50:   0,585 s/op
+                 testReentrantLock·p0.90:   0,680 s/op
+                 testReentrantLock·p0.95:   0,715 s/op
+                 testReentrantLock·p0.99:   0,715 s/op
+                 testReentrantLock·p0.999:  0,715 s/op
+                 testReentrantLock·p0.9999: 0,715 s/op
+                 testReentrantLock·p1.00:   0,715 s/op
+
+Iteration   3: 0,527 ±(99.9%) 0,096 s/op
+                 testReentrantLock·p0.00:   0,347 s/op
+                 testReentrantLock·p0.50:   0,540 s/op
+                 testReentrantLock·p0.90:   0,644 s/op
+                 testReentrantLock·p0.95:   0,645 s/op
+                 testReentrantLock·p0.99:   0,645 s/op
+                 testReentrantLock·p0.999:  0,645 s/op
+                 testReentrantLock·p0.9999: 0,645 s/op
+                 testReentrantLock·p1.00:   0,645 s/op
+
+
+# Run progress: 79,16% complete, ETA 00:04:22
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,535 ±(99.9%) 0,066 s/op
+# Warmup Iteration   2: 0,532 ±(99.9%) 0,083 s/op
+Iteration   1: 0,562 ±(99.9%) 0,110 s/op
+                 testReentrantLock·p0.00:   0,381 s/op
+                 testReentrantLock·p0.50:   0,611 s/op
+                 testReentrantLock·p0.90:   0,674 s/op
+                 testReentrantLock·p0.95:   0,705 s/op
+                 testReentrantLock·p0.99:   0,705 s/op
+                 testReentrantLock·p0.999:  0,705 s/op
+                 testReentrantLock·p0.9999: 0,705 s/op
+                 testReentrantLock·p1.00:   0,705 s/op
+
+Iteration   2: 0,566 ±(99.9%) 0,118 s/op
+                 testReentrantLock·p0.00:   0,373 s/op
+                 testReentrantLock·p0.50:   0,612 s/op
+                 testReentrantLock·p0.90:   0,694 s/op
+                 testReentrantLock·p0.95:   0,730 s/op
+                 testReentrantLock·p0.99:   0,730 s/op
+                 testReentrantLock·p0.999:  0,730 s/op
+                 testReentrantLock·p0.9999: 0,730 s/op
+                 testReentrantLock·p1.00:   0,730 s/op
+
+Iteration   3: 0,556 ±(99.9%) 0,103 s/op
+                 testReentrantLock·p0.00:   0,377 s/op
+                 testReentrantLock·p0.50:   0,583 s/op
+                 testReentrantLock·p0.90:   0,677 s/op
+                 testReentrantLock·p0.95:   0,678 s/op
+                 testReentrantLock·p0.99:   0,678 s/op
+                 testReentrantLock·p0.999:  0,678 s/op
+                 testReentrantLock·p0.9999: 0,678 s/op
+                 testReentrantLock·p1.00:   0,678 s/op
+
+
+
+Result "mipt.eilza.MyBenchmark.testCounterLock":
+  N = 111
+  mean =      0,550 ±(99.9%) 0,037 s/op
+
+  Histogram, s/op:
+    [0,300, 0,350) = 2 
+    [0,350, 0,400) = 26 
+    [0,400, 0,450) = 0 
+    [0,450, 0,500) = 4 
+    [0,500, 0,550) = 7 
+    [0,550, 0,600) = 23 
+    [0,600, 0,650) = 28 
+    [0,650, 0,700) = 18 
+    [0,700, 0,750) = 3 
+
+  Percentiles, s/op:
+      p(0,0000) =      0,326 s/op
+     p(50,0000) =      0,583 s/op
+     p(90,0000) =      0,673 s/op
+     p(95,0000) =      0,678 s/op
+     p(99,0000) =      0,728 s/op
+     p(99,9000) =      0,730 s/op
+     p(99,9900) =      0,730 s/op
+     p(99,9990) =      0,730 s/op
+     p(99,9999) =      0,730 s/op
+    p(100,0000) =      0,730 s/op
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: mipt.eilza.MyBenchmark.testCounterSequential
+
+# Run progress: 83,33% complete, ETA 00:03:30
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,004 ±(99.9%) 0,001 s/op
+# Warmup Iteration   2: 0,004 ±(99.9%) 0,001 s/op
+Iteration   1: 0,004 ±(99.9%) 0,001 s/op
+                 testCounterSequential·p0.00:   0,003 s/op
+                 testCounterSequential·p0.50:   0,004 s/op
+                 testCounterSequential·p0.90:   0,004 s/op
+                 testCounterSequential·p0.95:   0,005 s/op
+                 testCounterSequential·p0.99:   0,007 s/op
+                 testCounterSequential·p0.999:  0,010 s/op
+                 testCounterSequential·p0.9999: 0,012 s/op
+                 testCounterSequential·p1.00:   0,012 s/op
+
+Iteration   2: 0,004 ±(99.9%) 0,001 s/op
+                 testCounterSequential·p0.00:   0,003 s/op
+                 testCounterSequential·p0.50:   0,004 s/op
+                 testCounterSequential·p0.90:   0,004 s/op
+                 testCounterSequential·p0.95:   0,004 s/op
+                 testCounterSequential·p0.99:   0,006 s/op
+                 testCounterSequential·p0.999:  0,007 s/op
+                 testCounterSequential·p0.9999: 0,008 s/op
+                 testCounterSequential·p1.00:   0,008 s/op
+
+Iteration   3: 0,004 ±(99.9%) 0,001 s/op
+                 testCounterSequential·p0.00:   0,003 s/op
+                 testCounterSequential·p0.50:   0,004 s/op
+                 testCounterSequential·p0.90:   0,004 s/op
+                 testCounterSequential·p0.95:   0,005 s/op
+                 testCounterSequential·p0.99:   0,008 s/op
+                 testCounterSequential·p0.999:  0,035 s/op
+                 testCounterSequential·p0.9999: 0,054 s/op
+                 testCounterSequential·p1.00:   0,054 s/op
+
+
+# Run progress: 87,50% complete, ETA 00:02:37
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,004 ±(99.9%) 0,001 s/op
+# Warmup Iteration   2: 0,004 ±(99.9%) 0,001 s/op
+Iteration   1: 0,004 ±(99.9%) 0,001 s/op
+                 testCounterSequential·p0.00:   0,003 s/op
+                 testCounterSequential·p0.50:   0,004 s/op
+                 testCounterSequential·p0.90:   0,004 s/op
+                 testCounterSequential·p0.95:   0,004 s/op
+                 testCounterSequential·p0.99:   0,007 s/op
+                 testCounterSequential·p0.999:  0,025 s/op
+                 testCounterSequential·p0.9999: 0,045 s/op
+                 testCounterSequential·p1.00:   0,045 s/op
+
+Iteration   2: 0,006 ±(99.9%) 0,001 s/op
+                 testCounterSequential·p0.00:   0,003 s/op
+                 testCounterSequential·p0.50:   0,004 s/op
+                 testCounterSequential·p0.90:   0,008 s/op
+                 testCounterSequential·p0.95:   0,011 s/op
+                 testCounterSequential·p0.99:   0,040 s/op
+                 testCounterSequential·p0.999:  0,131 s/op
+                 testCounterSequential·p0.9999: 0,167 s/op
+                 testCounterSequential·p1.00:   0,167 s/op
+
+Iteration   3: 0,005 ±(99.9%) 0,001 s/op
+                 testCounterSequential·p0.00:   0,003 s/op
+                 testCounterSequential·p0.50:   0,004 s/op
+                 testCounterSequential·p0.90:   0,007 s/op
+                 testCounterSequential·p0.95:   0,008 s/op
+                 testCounterSequential·p0.99:   0,034 s/op
+                 testCounterSequential·p0.999:  0,173 s/op
+                 testCounterSequential·p0.9999: 0,299 s/op
+                 testCounterSequential·p1.00:   0,299 s/op
+
+
+
+Result "mipt.eilza.MyBenchmark.testCounterSequential":
+  N = 14217
+  mean =      0,004 ±(99.9%) 0,001 s/op
+
+  Histogram, s/op:
+    [0,000, 0,025) = 14148 
+    [0,025, 0,050) = 43 
+    [0,050, 0,075) = 12 
+    [0,075, 0,100) = 3 
+    [0,100, 0,125) = 7 
+    [0,125, 0,150) = 1 
+    [0,150, 0,175) = 2 
+    [0,175, 0,200) = 0 
+    [0,200, 0,225) = 0 
+    [0,225, 0,250) = 0 
+    [0,250, 0,275) = 0 
+    [0,275, 0,300) = 1 
+
+  Percentiles, s/op:
+      p(0,0000) =      0,003 s/op
+     p(50,0000) =      0,004 s/op
+     p(90,0000) =      0,004 s/op
+     p(95,0000) =      0,006 s/op
+     p(99,0000) =      0,013 s/op
+     p(99,9000) =      0,078 s/op
+     p(99,9900) =      0,243 s/op
+     p(99,9990) =      0,299 s/op
+     p(99,9999) =      0,299 s/op
+    p(100,0000) =      0,299 s/op
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: mipt.eilza.MyBenchmark.testCounterSynchronized
+
+# Run progress: 91,66% complete, ETA 00:01:44
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,469 ±(99.9%) 0,062 s/op
+# Warmup Iteration   2: 0,480 ±(99.9%) 0,082 s/op
+Iteration   1: 0,481 ±(99.9%) 0,084 s/op
+                 testCounterSynchronized·p0.00:   0,307 s/op
+                 testCounterSynchronized·p0.50:   0,493 s/op
+                 testCounterSynchronized·p0.90:   0,625 s/op
+                 testCounterSynchronized·p0.95:   0,641 s/op
+                 testCounterSynchronized·p0.99:   0,643 s/op
+                 testCounterSynchronized·p0.999:  0,643 s/op
+                 testCounterSynchronized·p0.9999: 0,643 s/op
+                 testCounterSynchronized·p1.00:   0,643 s/op
+
+Iteration   2: 0,488 ±(99.9%) 0,119 s/op
+                 testCounterSynchronized·p0.00:   0,300 s/op
+                 testCounterSynchronized·p0.50:   0,501 s/op
+                 testCounterSynchronized·p0.90:   0,720 s/op
+                 testCounterSynchronized·p0.95:   0,822 s/op
+                 testCounterSynchronized·p0.99:   0,829 s/op
+                 testCounterSynchronized·p0.999:  0,829 s/op
+                 testCounterSynchronized·p0.9999: 0,829 s/op
+                 testCounterSynchronized·p1.00:   0,829 s/op
+
+Iteration   3: 0,473 ±(99.9%) 0,082 s/op
+                 testCounterSynchronized·p0.00:   0,313 s/op
+                 testCounterSynchronized·p0.50:   0,510 s/op
+                 testCounterSynchronized·p0.90:   0,571 s/op
+                 testCounterSynchronized·p0.95:   0,619 s/op
+                 testCounterSynchronized·p0.99:   0,627 s/op
+                 testCounterSynchronized·p0.999:  0,627 s/op
+                 testCounterSynchronized·p0.9999: 0,627 s/op
+                 testCounterSynchronized·p1.00:   0,627 s/op
+
+
+# Run progress: 95,83% complete, ETA 00:00:52
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,466 ±(99.9%) 0,074 s/op
+# Warmup Iteration   2: 0,464 ±(99.9%) 0,076 s/op
+Iteration   1: 0,477 ±(99.9%) 0,090 s/op
+                 testCounterSynchronized·p0.00:   0,296 s/op
+                 testCounterSynchronized·p0.50:   0,520 s/op
+                 testCounterSynchronized·p0.90:   0,615 s/op
+                 testCounterSynchronized·p0.95:   0,628 s/op
+                 testCounterSynchronized·p0.99:   0,628 s/op
+                 testCounterSynchronized·p0.999:  0,628 s/op
+                 testCounterSynchronized·p0.9999: 0,628 s/op
+                 testCounterSynchronized·p1.00:   0,628 s/op
+
+Iteration   2: 0,497 ±(99.9%) 0,093 s/op
+                 testCounterSynchronized·p0.00:   0,302 s/op
+                 testCounterSynchronized·p0.50:   0,528 s/op
+                 testCounterSynchronized·p0.90:   0,605 s/op
+                 testCounterSynchronized·p0.95:   0,651 s/op
+                 testCounterSynchronized·p0.99:   0,655 s/op
+                 testCounterSynchronized·p0.999:  0,655 s/op
+                 testCounterSynchronized·p0.9999: 0,655 s/op
+                 testCounterSynchronized·p1.00:   0,655 s/op
+
+Iteration   3: 0,515 ±(99.9%) 0,115 s/op
+                 testCounterSynchronized·p0.00:   0,301 s/op
+                 testCounterSynchronized·p0.50:   0,533 s/op
+                 testCounterSynchronized·p0.90:   0,660 s/op
+                 testCounterSynchronized·p0.95:   0,797 s/op
+                 testCounterSynchronized·p0.99:   0,804 s/op
+                 testCounterSynchronized·p0.999:  0,804 s/op
+                 testCounterSynchronized·p0.9999: 0,804 s/op
+                 testCounterSynchronized·p1.00:   0,804 s/op
+
+
+
+Result "mipt.eilza.MyBenchmark.testCounterSynchronized":
+  N = 126
+  mean =      0,488 ±(99.9%) 0,034 s/op
+
+  Histogram, s/op:
+    [0,200, 0,250) = 0 
+    [0,250, 0,300) = 4 
+    [0,300, 0,350) = 27 
+    [0,350, 0,400) = 1 
+    [0,400, 0,450) = 3 
+    [0,450, 0,500) = 22 
+    [0,500, 0,550) = 30 
+    [0,550, 0,600) = 25 
+    [0,600, 0,650) = 9 
+    [0,650, 0,700) = 2 
+    [0,700, 0,750) = 0 
+    [0,750, 0,800) = 1 
+    [0,800, 0,850) = 2 
+
+  Percentiles, s/op:
+      p(0,0000) =      0,296 s/op
+     p(50,0000) =      0,517 s/op
+     p(90,0000) =      0,608 s/op
+     p(95,0000) =      0,638 s/op
+     p(99,0000) =      0,823 s/op
+     p(99,9000) =      0,829 s/op
+     p(99,9900) =      0,829 s/op
+     p(99,9990) =      0,829 s/op
+     p(99,9999) =      0,829 s/op
+    p(100,0000) =      0,829 s/op
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: mipt.eilza.MyBenchmark.testCounterAtomicLong
+
+# Run progress: 100,00% complete, ETA 00:00:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,615 s/op
+# Warmup Iteration   2: 0,469 s/op
+Iteration   1: 0,340 s/op
+Iteration   2: 0,419 s/op
+Iteration   3: 0,386 s/op
+
+# Run progress: 100,00% complete, ETA 00:00:00
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,563 s/op
+# Warmup Iteration   2: 0,431 s/op
+Iteration   1: 0,390 s/op
+Iteration   2: 0,365 s/op
+Iteration   3: 0,403 s/op
+
+
+Result "mipt.eilza.MyBenchmark.testCounterAtomicLong":
+  N = 6
+  mean =      0,384 ±(99.9%) 0,079 s/op
+
+  Histogram, s/op:
+    [0,330, 0,335) = 0 
+    [0,335, 0,340) = 1 
+    [0,340, 0,345) = 0 
+    [0,345, 0,350) = 0 
+    [0,350, 0,355) = 0 
+    [0,355, 0,360) = 0 
+    [0,360, 0,365) = 0 
+    [0,365, 0,370) = 1 
+    [0,370, 0,375) = 0 
+    [0,375, 0,380) = 0 
+    [0,380, 0,385) = 0 
+    [0,385, 0,390) = 2 
+    [0,390, 0,395) = 0 
+    [0,395, 0,400) = 0 
+    [0,400, 0,405) = 1 
+    [0,405, 0,410) = 0 
+    [0,410, 0,415) = 0 
+
+  Percentiles, s/op:
+      p(0,0000) =      0,340 s/op
+     p(50,0000) =      0,388 s/op
+     p(90,0000) =      0,419 s/op
+     p(95,0000) =      0,419 s/op
+     p(99,0000) =      0,419 s/op
+     p(99,9000) =      0,419 s/op
+     p(99,9900) =      0,419 s/op
+     p(99,9990) =      0,419 s/op
+     p(99,9999) =      0,419 s/op
+    p(100,0000) =      0,419 s/op
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: mipt.eilza.MyBenchmark.testCounterLock
+
+# Run progress: 100,00% complete, ETA 00:00:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,657 s/op
+# Warmup Iteration   2: 0,510 s/op
+Iteration   1: 0,638 s/op
+Iteration   2: 0,421 s/op
+Iteration   3: 0,624 s/op
+
+# Run progress: 100,00% complete, ETA 00:00:00
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,640 s/op
+# Warmup Iteration   2: 0,527 s/op
+Iteration   1: 0,608 s/op
+Iteration   2: 0,401 s/op
+Iteration   3: 0,595 s/op
+
+
+Result "mipt.eilza.MyBenchmark.testCounterLock":
+  N = 6
+  mean =      0,548 ±(99.9%) 0,300 s/op
+
+  Histogram, s/op:
+    [0,400, 0,425) = 2 
+    [0,425, 0,450) = 0 
+    [0,450, 0,475) = 0 
+    [0,475, 0,500) = 0 
+    [0,500, 0,525) = 0 
+    [0,525, 0,550) = 0 
+    [0,550, 0,575) = 0 
+    [0,575, 0,600) = 1 
+    [0,600, 0,625) = 2 
+    [0,625, 0,650) = 1 
+    [0,650, 0,675) = 0 
+    [0,675, 0,700) = 0 
+
+  Percentiles, s/op:
+      p(0,0000) =      0,401 s/op
+     p(50,0000) =      0,602 s/op
+     p(90,0000) =      0,638 s/op
+     p(95,0000) =      0,638 s/op
+     p(99,0000) =      0,638 s/op
+     p(99,9000) =      0,638 s/op
+     p(99,9900) =      0,638 s/op
+     p(99,9990) =      0,638 s/op
+     p(99,9999) =      0,638 s/op
+    p(100,0000) =      0,638 s/op
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: mipt.eilza.MyBenchmark.testCounterSequential
+
+# Run progress: 100,00% complete, ETA 00:00:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,015 s/op
+# Warmup Iteration   2: 0,006 s/op
+Iteration   1: 0,004 s/op
+Iteration   2: 0,004 s/op
+Iteration   3: 0,004 s/op
+
+# Run progress: 100,00% complete, ETA 00:00:00
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,016 s/op
+# Warmup Iteration   2: 0,007 s/op
+Iteration   1: 0,004 s/op
+Iteration   2: 0,004 s/op
+Iteration   3: 0,004 s/op
+
+
+Result "mipt.eilza.MyBenchmark.testCounterSequential":
+  N = 6
+  mean =      0,004 ±(99.9%) 0,001 s/op
+
+  Histogram, s/op:
+    [0,004, 0,004) = 0 
+    [0,004, 0,004) = 1 
+    [0,004, 0,004) = 2 
+    [0,004, 0,004) = 0 
+    [0,004, 0,004) = 0 
+    [0,004, 0,004) = 0 
+    [0,004, 0,004) = 0 
+    [0,004, 0,004) = 0 
+    [0,004, 0,004) = 0 
+    [0,004, 0,004) = 0 
+    [0,004, 0,004) = 2 
+    [0,004, 0,004) = 0 
+    [0,004, 0,004) = 0 
+    [0,004, 0,004) = 0 
+    [0,004, 0,004) = 0 
+
+  Percentiles, s/op:
+      p(0,0000) =      0,004 s/op
+     p(50,0000) =      0,004 s/op
+     p(90,0000) =      0,004 s/op
+     p(95,0000) =      0,004 s/op
+     p(99,0000) =      0,004 s/op
+     p(99,9000) =      0,004 s/op
+     p(99,9900) =      0,004 s/op
+     p(99,9990) =      0,004 s/op
+     p(99,9999) =      0,004 s/op
+    p(100,0000) =      0,004 s/op
+
+
+# JMH version: 1.22
+# VM version: JDK 11.0.1, Java HotSpot(TM) 64-Bit Server VM, 11.0.1+13-LTS
+# VM invoker: C:\Program Files\Java\jdk-11.0.1\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\lib\idea_rt.jar=54884:C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin -Dfile.encoding=UTF-8
+# Warmup: 2 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: mipt.eilza.MyBenchmark.testCounterSynchronized
+
+# Run progress: 100,00% complete, ETA 00:00:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 0,605 s/op
+# Warmup Iteration   2: 0,454 s/op
+Iteration   1: 0,562 s/op
+Iteration   2: 0,338 s/op
+Iteration   3: 0,530 s/op
+
+# Run progress: 100,00% complete, ETA 00:00:00
+# Fork: 2 of 2
+# Warmup Iteration   1: 0,620 s/op
+# Warmup Iteration   2: 0,451 s/op
+Iteration   1: 0,521 s/op
+Iteration   2: 0,395 s/op
+Iteration   3: 0,569 s/op
+
+
+Result "mipt.eilza.MyBenchmark.testCounterSynchronized":
+  N = 6
+  mean =      0,486 ±(99.9%) 0,269 s/op
+
+  Histogram, s/op:
+    [0,300, 0,325) = 0 
+    [0,325, 0,350) = 1 
+    [0,350, 0,375) = 0 
+    [0,375, 0,400) = 1 
+    [0,400, 0,425) = 0 
+    [0,425, 0,450) = 0 
+    [0,450, 0,475) = 0 
+    [0,475, 0,500) = 0 
+    [0,500, 0,525) = 1 
+    [0,525, 0,550) = 1 
+    [0,550, 0,575) = 2 
+    [0,575, 0,600) = 0 
+
+  Percentiles, s/op:
+      p(0,0000) =      0,338 s/op
+     p(50,0000) =      0,525 s/op
+     p(90,0000) =      0,569 s/op
+     p(95,0000) =      0,569 s/op
+     p(99,0000) =      0,569 s/op
+     p(99,9000) =      0,569 s/op
+     p(99,9900) =      0,569 s/op
+     p(99,9990) =      0,569 s/op
+     p(99,9999) =      0,569 s/op
+    p(100,0000) =      0,569 s/op
+
+
+# Run complete. Total time: 00:21:23
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                              Mode    Cnt    Score    Error  Units
+MyBenchmark.testCounterAtomicLong                                     thrpt      6    2,310 ±  0,278  ops/s
+MyBenchmark.testCounterLock                                           thrpt      6    1,908 ±  0,300  ops/s
+MyBenchmark.testCounterSequential                                     thrpt      6  263,217 ± 25,818  ops/s
+MyBenchmark.testCounterSynchronized                                   thrpt      6    2,140 ±  0,153  ops/s
+MyBenchmark.testCounterAtomicLong                                      avgt      6    0,424 ±  0,068   s/op
+MyBenchmark.testCounterLock                                            avgt      6    0,539 ±  0,035   s/op
+MyBenchmark.testCounterSequential                                      avgt      6    0,004 ±  0,001   s/op
+MyBenchmark.testCounterSynchronized                                    avgt      6    0,500 ±  0,067   s/op
+MyBenchmark.testCounterAtomicLong                                    sample    141    0,431 ±  0,027   s/op
+MyBenchmark.testCounterAtomicLong:testCounterAtomicLong·p0.00        sample           0,276            s/op
+MyBenchmark.testCounterAtomicLong:testCounterAtomicLong·p0.50        sample           0,461            s/op
+MyBenchmark.testCounterAtomicLong:testCounterAtomicLong·p0.90        sample           0,537            s/op
+MyBenchmark.testCounterAtomicLong:testCounterAtomicLong·p0.95        sample           0,562            s/op
+MyBenchmark.testCounterAtomicLong:testCounterAtomicLong·p0.99        sample           0,650            s/op
+MyBenchmark.testCounterAtomicLong:testCounterAtomicLong·p0.999       sample           0,672            s/op
+MyBenchmark.testCounterAtomicLong:testCounterAtomicLong·p0.9999      sample           0,672            s/op
+MyBenchmark.testCounterAtomicLong:testCounterAtomicLong·p1.00        sample           0,672            s/op
+MyBenchmark.testCounterLock                                          sample    111    0,550 ±  0,037   s/op
+MyBenchmark.testCounterLock:testReentrantLock·p0.00                  sample           0,326            s/op
+MyBenchmark.testCounterLock:testReentrantLock·p0.50                  sample           0,583            s/op
+MyBenchmark.testCounterLock:testReentrantLock·p0.90                  sample           0,673            s/op
+MyBenchmark.testCounterLock:testReentrantLock·p0.95                  sample           0,678            s/op
+MyBenchmark.testCounterLock:testReentrantLock·p0.99                  sample           0,728            s/op
+MyBenchmark.testCounterLock:testReentrantLock·p0.999                 sample           0,730            s/op
+MyBenchmark.testCounterLock:testReentrantLock·p0.9999                sample           0,730            s/op
+MyBenchmark.testCounterLock:testReentrantLock·p1.00                  sample           0,730            s/op
+MyBenchmark.testCounterSequential                                    sample  14217    0,004 ±  0,001   s/op
+MyBenchmark.testCounterSequential:testCounterSequential·p0.00        sample           0,003            s/op
+MyBenchmark.testCounterSequential:testCounterSequential·p0.50        sample           0,004            s/op
+MyBenchmark.testCounterSequential:testCounterSequential·p0.90        sample           0,004            s/op
+MyBenchmark.testCounterSequential:testCounterSequential·p0.95        sample           0,006            s/op
+MyBenchmark.testCounterSequential:testCounterSequential·p0.99        sample           0,013            s/op
+MyBenchmark.testCounterSequential:testCounterSequential·p0.999       sample           0,078            s/op
+MyBenchmark.testCounterSequential:testCounterSequential·p0.9999      sample           0,243            s/op
+MyBenchmark.testCounterSequential:testCounterSequential·p1.00        sample           0,299            s/op
+MyBenchmark.testCounterSynchronized                                  sample    126    0,488 ±  0,034   s/op
+MyBenchmark.testCounterSynchronized:testCounterSynchronized·p0.00    sample           0,296            s/op
+MyBenchmark.testCounterSynchronized:testCounterSynchronized·p0.50    sample           0,517            s/op
+MyBenchmark.testCounterSynchronized:testCounterSynchronized·p0.90    sample           0,608            s/op
+MyBenchmark.testCounterSynchronized:testCounterSynchronized·p0.95    sample           0,638            s/op
+MyBenchmark.testCounterSynchronized:testCounterSynchronized·p0.99    sample           0,823            s/op
+MyBenchmark.testCounterSynchronized:testCounterSynchronized·p0.999   sample           0,829            s/op
+MyBenchmark.testCounterSynchronized:testCounterSynchronized·p0.9999  sample           0,829            s/op
+MyBenchmark.testCounterSynchronized:testCounterSynchronized·p1.00    sample           0,829            s/op
+MyBenchmark.testCounterAtomicLong                                        ss      6    0,384 ±  0,079   s/op
+MyBenchmark.testCounterLock                                              ss      6    0,548 ±  0,300   s/op
+MyBenchmark.testCounterSequential                                        ss      6    0,004 ±  0,001   s/op
+MyBenchmark.testCounterSynchronized                                      ss      6    0,486 ±  0,269   s/op
+
+Process finished with exit code 0

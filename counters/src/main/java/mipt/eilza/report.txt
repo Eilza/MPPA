@@ -1,0 +1,45 @@
+В данной работе исследовались 4 вида счетчиков (CounterSynchronized, CounterReentrantLock, CounterAtomicLong –
+многопоточные, CounterSequential – однопоточный для сравнения результатов)
+
+Для проведения теста использовался фреймворк JMH (Набор инструментов для написания и анализа микробенчмарков
+на языках использующих JVM(java, kotlin, scala)
+
+Коротко о JMH
+Написать корректную бенчмарку довольно сложно, так как существует множество оптимизация как в компиляторе так и
+в JVM(JIT), которые будут применены к тестируемому маленькому участку кода и не будут применены к этому же участку,
+но уже в целом рабочем приложении.
+
+(Loop Optimizations – не следует использовать циклы, скорее всего они будут оптимизированы)
+(Dead Code Elimination – JVM выкинет не используемые участки кода, поэтому нужно либо возвращать какой-то результат
+ с переменой, получение которой нужно замерить, либо использовать специальный класс BlackHole)
+(Constant Folding – если какие-либо вычисления были основаны на константах, в результате которых были получены другие
+ константы, то JVM будет просто возвращать крайнюю константу без вычислений. Чтобы избежать данной оптимизации
+ константы принимаются методом (используется специальный класс MyState)
+
+В моих тестах, перечисленные сложности с оптимизацией были учтены.
+
+Бенчмарки запускались со следующими параметрами
+@BenchmarkMode(Mode.All) – вся информация
+@Fork(value = 2)
+@Warmup(iterations = 2)
+@Measurement(iterations = 3)
+@Group("testCounterSynchronized")
+@GroupThreads(1)
+Внутри каждой многопоточной бенчмарки создавались четыре нити(nThreads) которые увеличивали счётчик на заранее
+определенное число(incrementCallsCount)
+
+Были получены результаты
+Benchmark                                                              Mode    Cnt    Score    Error  Units
+MyBenchmark.testCounterAtomicLong                                     thrpt      6    2,310 ±  0,278  ops/s
+MyBenchmark.testCounterLock                                           thrpt      6    1,908 ±  0,300  ops/s
+MyBenchmark.testCounterSequential                                     thrpt      6  263,217 ± 25,818  ops/s
+MyBenchmark.testCounterSynchronized                                   thrpt      6    2,140 ±  0,153  ops/s
+
+MyBenchmark.testCounterAtomicLong                                      avgt      6    0,424 ±  0,068   s/op
+MyBenchmark.testCounterLock                                            avgt      6    0,539 ±  0,035   s/op
+MyBenchmark.testCounterSequential                                      avgt      6    0,004 ±  0,001   s/op
+MyBenchmark.testCounterSynchronized                                    avgt      6    0,500 ±  0,067   s/op
+
+Самые быстрым конечно же оказался CounterSequential, потому что в данном случае многпоточность только
+замедляет работу(нет паралельных участов кода, которые можно эффективно распаралелить) см закон Амдала)
+Далее идет CounterAtomicLong, CounterSynchronized, CounterReentrantLock.
